@@ -33,3 +33,7 @@ project (project_name)
     filter "configurations:Debug"
         defines (project_pre .. "_DEBUG")
         symbols "On"
+    -- Need to figure out how filters work properly...
+    -- filter "configurations:Prod"
+    --     defines (project_pre .. "_PROD")
+    --     optimize "On"
