@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Premake",
+            "type": "shell",
+            "command": "./vendor/bin/premake/premake5",
+            "args": [
+                {
+                    "value": "premake5.lua",
+                    "quoting": "escape"
+                }
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        
+        },
+        {
+            "label": "[Debug] Build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                {
+                    "value": "config=debug",
+                    "quoting": "escape"
+                }
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        
+        }
+    ]
+}
