@@ -2,6 +2,29 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Clean",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                {
+                    "value": "-r",
+                    "quoting": "escape"
+                },
+                {
+                    "value": "./bin",
+                    "quoting": "escape"
+                },
+                {
+                    "value": "./bin-int",
+                    "quoting": "escape"
+                }
+            ],
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
+            }
+        },
+        {
             "label": "Premake",
             "type": "shell",
             "command": "./vendor/bin/premake/premake5",
@@ -43,28 +66,29 @@
                 "panel": "dedicated"
             }
         },
-        {
-            "label": "Clean",
-            "type": "shell",
-            "command": "rm",
-            "args": [
-                {
-                    "value": "-r",
-                    "quoting": "escape"
-                },
-                {
-                    "value": "./bin",
-                    "quoting": "escape"
-                },
-                {
-                    "value": "./bin-int",
-                    "quoting": "escape"
-                }
-            ],
-            "presentation": {
-                "reveal": "silent",
-                "panel": "dedicated"
-            }
-        }
+        // Currently not functional until I figure out premake5 filters
+        // {
+        //     "label": "[Prod] Build",
+        //     "type": "shell",
+        //     "dependsOn": ["Premake"],
+        //     "command": "make",
+        //     "args": [
+        //         {
+        //             "value": "config=prod",
+        //             "quoting": "escape"
+        //         }
+        //     ],
+        //     "problemMatcher": [
+        //         "$gcc"
+        //     ],
+        //     "group": {
+        //         "kind": "build",
+        //         "isDefault": true
+        //     },
+        //     "presentation": {
+        //         "reveal": "silent",
+        //         "panel": "dedicated"
+        //     }
+        // }
     ]
 }
