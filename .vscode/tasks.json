@@ -15,15 +15,15 @@
                     "quoting": "escape"
                 }
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
             }
-        
         },
         {
             "label": "[Debug] Build",
             "type": "shell",
+            "dependsOn": ["Premake"],
             "command": "make",
             "args": [
                 {
@@ -37,8 +37,34 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
             }
-        
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                {
+                    "value": "-r",
+                    "quoting": "escape"
+                },
+                {
+                    "value": "./bin",
+                    "quoting": "escape"
+                },
+                {
+                    "value": "./bin-int",
+                    "quoting": "escape"
+                }
+            ],
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
+            }
         }
     ]
 }
