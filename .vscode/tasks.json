@@ -7,6 +7,10 @@
             "command": "./vendor/bin/premake/premake5",
             "args": [
                 {
+                    "value": "gmake2",
+                    "quoting": "escape"
+                },
+                {
                     "value": "premake5.lua",
                     "quoting": "escape"
                 }
