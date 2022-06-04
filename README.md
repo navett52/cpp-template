@@ -1,6 +1,9 @@
 # C++ Template
 A C++ Template repo to make it easier to get a c++ project up and running.
 
+## Warning
+Don't forget to configure `premake5.lua` and `launch.json` with the proper project name instead of `Template`.
+
 ## Developing the Program
 ### Dev Dependencies
 - Premake5
